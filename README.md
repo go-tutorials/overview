@@ -19,7 +19,7 @@
 create table if not exists users (
   id varchar(40) not null,
   username varchar(120),
-  email varchar(120),go-mongo-layer-architecture-sample
+  email varchar(120),
   phone varchar(45),
   date_of_birth date,
   primary key (id)
