@@ -40,7 +40,7 @@
 #### After finished the basic syntax, you should do these exercises
 - Exercise 1: A CRUD REST API with Mux and My SQL, table users, with these fields fields id, username, email, phone, dateOfBirth, and methods GetAll, GetByID, Insert, Update, Delete (Refer to [sql](https://github.com/go-tutorials/go-sql-tutorial))
 - Exercise 2: A CRUD REST API with Mux and MongoDB: collection user, with these fields id, username, email, phone, dateOfBirth, and methods: GetAll, GetByID, Insert, Update, Delete (Refer to [mongo](https://github.com/go-tutorials/go-sql-tutorial))
-- Exercise 2: A CRUD REST API with Mux and gorm with My SQL: collection user, with these fields id, username, email, phone, dateOfBirth, and methods: GetAll, GetByID, Insert, Update, Delete (Refer to [gorm](https://github.com/go-tutorials/gorm-tutorial))
+- Exercise 3: A CRUD REST API with Mux and gorm with My SQL: collection user, with these fields id, username, email, phone, dateOfBirth, and methods: GetAll, GetByID, Insert, Update, Delete (Refer to [gorm](https://github.com/go-tutorials/gorm-tutorial))
 ```sql
 -- script to create database for exercise 1, exercise 3
 create table if not exists users (
