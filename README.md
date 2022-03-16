@@ -7,8 +7,101 @@
 #### Introduction
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/75lJDVT1h0s/0.jpg)](http://www.youtube.com/watch?v=75lJDVT1h0s&list=PLzMcBGfZo4-mtY_SE3HuzQJzuj4VlUG0q&index=1&ab_channel=TechWithTim "Introduction to GO")
 ### Basic GO
-- To learn the basic syntax, you can start at [tutorials point](https://www.tutorialspoint.com/go/index.htm)
+- To learn the basic syntax, you can start at https://go.dev/tour
+#### Hello world
+- Every Go program is made up of packages
+- Start running in package main
+- Run here https://go.dev/tour/welcome/1
+- In this sample, use “fmt” package to print a string to console
+```go
+package main
 
+import "fmt"
+
+func main() {
+	fmt.Println("Hello, world")
+}
+```
+
+#### Function
+Support to return multiple values
+##### Exercise 1: write a function, to add 2 integer numbers
+- Run here https://go.dev/tour/basics/5
+##### Exercise 2: write a function, to swap 2 strings
+- Run here https://go.dev/tour/basics/6
+
+<table><thead><tr><td>
+
+[Return 1 value](https://go.dev/tour/basics/5)
+</td><td>
+
+[Return 2 values](https://go.dev/tour/basics/6)
+</td></tr></thead><tbody><tr><td>
+
+```go
+package main
+
+import "fmt"
+
+func add(x, y int) int {
+	return x + y
+}
+
+func main() {
+	fmt.Println(add(42, 13))
+}
+```
+</td>
+<td>
+
+```go
+package main
+
+import "fmt"
+
+func swap(x, y string) (string, string) {
+	return y, x
+}
+
+func main() {
+	a, b := swap("hello", "world")
+	fmt.Println(a, b)
+}
+```
+
+</td></tr></tbody></table>
+
+#### Variables
+#### Declare variables
+Use “var” to declare 3 variables
+- Run here https://go.dev/tour/basics/8 
+```go
+package main
+
+import "fmt"
+
+var c, python, java bool
+
+func main() {
+	var i int
+	fmt.Println(i, c, python, java)
+}
+```
+Use short variables declarations
+- Run here https://go.dev/tour/basics/10
+```go
+package main
+
+import "fmt"
+
+func main() {
+	var i, j int = 1, 2
+	k := 3
+	c, python, java := true, false, "no!"
+
+	fmt.Println(i, j, k, c, python, java)
+}
+```
 ### Exercises:
 #### After finished the basic syntax, you should do these exercises
 - Exercise 1: A CRUD REST API with Mux and My SQL, table users, with these fields fields id, username, email, phone, dateOfBirth, and methods GetAll, GetByID, Insert, Update, Delete (Refer to [go-sql-tutorial](https://github.com/go-tutorials/go-sql-tutorial))
