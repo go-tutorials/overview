@@ -72,9 +72,20 @@ func main() {
 </td></tr></tbody></table>
 
 #### Variables
-#### Declare variables
-Use “var” to declare 3 variables
+Declare variables
+##### Exercise 1: Use “var” to declare 3 variables
 - Run here https://go.dev/tour/basics/8 
+##### Exercise 2: Use short variables declarations
+- Run here https://go.dev/tour/basics/10
+
+<table><thead><tr><td>
+
+[Use var](https://go.dev/tour/basics/8)
+</td><td>
+
+[Use short variables declarations](https://go.dev/tour/basics/10)
+</td></tr></thead><tbody><tr><td>
+
 ```go
 package main
 
@@ -87,8 +98,9 @@ func main() {
 	fmt.Println(i, c, python, java)
 }
 ```
-Use short variables declarations
-- Run here https://go.dev/tour/basics/10
+</td>
+<td>
+
 ```go
 package main
 
@@ -102,6 +114,284 @@ func main() {
 	fmt.Println(i, j, k, c, python, java)
 }
 ```
+</td></tr></tbody></table>
+
+Support convert value to Type
+##### Exercise 1: use expression T(v) to convert some number
+- Run here https://go.dev/tour/basics/13 
+
+```go
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func main() {
+	var x, y int = 3, 4
+	var f float64 = math.Sqrt(float64(x*x + y*y))
+	var z uint = uint(f)
+	fmt.Println(x, y, z)
+}
+
+```
+#### Loop
+Declare variables
+##### Exercise 1: Total from 1 to 10
+- Run here https://go.dev/tour/flowcontrol/1 
+##### Exercise 2: Total from 1 to 10, with "while" loop logic
+- Run here https://go.dev/tour/flowcontrol/3
+
+<table><thead><tr><td>
+
+[For loop](https://go.dev/tour/flowcontrol/1)
+</td><td>
+
+[while is spelled for in Go](https://go.dev/tour/flowcontrol/3)
+</td></tr></thead><tbody><tr><td>
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	sum := 0
+	for i := 0; i < 10; i++ {
+		sum += i
+	}
+	fmt.Println(sum)
+}
+```
+</td>
+<td>
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	sum := 1
+	for sum < 1000 {
+		sum += sum
+	}
+	fmt.Println(sum)
+}
+```
+</td></tr></tbody></table>
+
+#### Defer
+A defer statement defers the execution of a function until the surrounding function return.
+##### Exercise 1: Print “hello world” with defer
+- Run here https://go.dev/tour/flowcontrol/12
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	defer fmt.Println("world")
+
+	fmt.Println("hello")
+}
+```
+
+#### Pointer
+Struct fields can be accessed through a struct pointer.
+##### Exercise 1: Access a struct with a struct pointer
+- Run here https://go.dev/tour/moretypes/4
+
+```go
+package main
+
+import "fmt"
+
+type Vertex struct {
+	X int
+	Y int
+}
+
+func main() {
+	v := Vertex{1, 2}
+	p := &v
+	p.X = 1e9
+	fmt.Println(v)
+}
+```
+
+#### Array
+Arrays cannot be resized.
+##### Exercise 1: Create arrays with string & int
+- Run here https://go.dev/tour/moretypes/6
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	var a [2]string
+	a[0] = "Hello"
+	a[1] = "World"
+	fmt.Println(a[0], a[1])
+	fmt.Println(a)
+
+	primes := [6]int{2, 3, 5, 7, 11, 13}
+	fmt.Println(primes)
+}
+```
+
+#### Slice
+A dynamically-sized
+
+##### Exercise 1: Create a slice from an array
+- Run here https://go.dev/tour/moretypes/7
+##### Exercise 2: Create a slice from an array
+- Run here https://go.dev/tour/moretypes/13
+
+<table><thead><tr><td>
+
+[Print 1 slice](https://go.dev/tour/moretypes/7)
+</td><td>
+
+[Print 4 slices](https://go.dev/tour/moretypes/13)
+</td></tr></thead><tbody><tr><td>
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	primes := [6]int{2, 3, 5, 7, 11, 13}
+
+	var s []int = primes[1:4]
+	fmt.Println(s, primes)
+}
+```
+</td>
+<td>
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	a := make([]int, 5)
+	printSlice("a", a)
+	b := make([]int, 0, 5)
+	printSlice("b", b)
+	c := b[:2]
+	printSlice("c", c)
+	d := c[2:5]
+	printSlice("d", d)
+}
+func printSlice(s string, x []int) {
+	fmt.Printf("%s len=%d cap=%d %v\n", s, len(x), cap(x), x)
+}
+```
+</td></tr></tbody></table>
+
+#### Range
+The range form of the for loop iterates over a slice or map.
+##### Exercise 1: Loop a slice and print 2 powers
+- Run here https://go.dev/tour/moretypes/16
+
+```go
+package main
+
+import "fmt"
+
+var pow = []int{1, 2, 4, 8, 16, 32, 64, 128}
+
+func main() {
+	for i, v := range pow {
+		fmt.Printf("2**%d = %d\n", i, v)
+	}
+}
+```
+
+#### Method
+Method is a function of struct.
+##### Exercise 1: Create a method, with struct receiver
+- Run here https://go.dev/tour/methods/1
+
+```go
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+type Vertex struct {
+	X, Y float64
+}
+
+func (v Vertex) Abs() float64 {
+	return math.Sqrt(v.X*v.X + v.Y*v.Y)
+}
+
+func main() {
+	v := Vertex{3, 4}
+	fmt.Println(v.Abs())
+}
+```
+
+#### Interface
+An interface type is defined as a set of method signatures.
+##### Exercise 1: Create a method, with struct receiver
+- Run here https://go.dev/tour/methods/9
+
+```go
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+type Abser interface {
+	Abs() float64
+}
+
+func main() {
+	var a Abser
+	f := MyFloat(-math.Sqrt2)
+	v := Vertex{3, 4}
+
+	a = f  // a MyFloat implements Abser
+	a = &v // a *Vertex implements Abser
+
+	// In the following line, v is a Vertex (not *Vertex)
+	// and does NOT implement Abser.
+	a = v
+
+	fmt.Println(a.Abs())
+}
+
+type MyFloat float64
+
+func (f MyFloat) Abs() float64 {
+	if f < 0 {
+		return float64(-f)
+	}
+	return float64(f)
+}
+
+type Vertex struct {
+	X, Y float64
+}
+
+func (v *Vertex) Abs() float64 {
+	return math.Sqrt(v.X*v.X + v.Y*v.Y)
+}
+```
+
 ### Exercises:
 #### After finished the basic syntax, you should do these exercises
 - Exercise 1: A CRUD REST API with Mux and My SQL, table users, with these fields fields id, username, email, phone, dateOfBirth, and methods GetAll, GetByID, Insert, Update, Delete (Refer to [go-sql-tutorial](https://github.com/go-tutorials/go-sql-tutorial))
