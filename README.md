@@ -19,7 +19,7 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("Hello, world")
+  fmt.Println("Hello, world")
 }
 ```
 
@@ -44,11 +44,11 @@ package main
 import "fmt"
 
 func add(x, y int) int {
-	return x + y
+  return x + y
 }
 
 func main() {
-	fmt.Println(add(42, 13))
+  fmt.Println(add(42, 13))
 }
 ```
 </td>
@@ -60,12 +60,12 @@ package main
 import "fmt"
 
 func swap(x, y string) (string, string) {
-	return y, x
+  return y, x
 }
 
 func main() {
-	a, b := swap("hello", "world")
-	fmt.Println(a, b)
+  a, b := swap("hello", "world")
+  fmt.Println(a, b)
 }
 ```
 
@@ -94,8 +94,8 @@ import "fmt"
 var c, python, java bool
 
 func main() {
-	var i int
-	fmt.Println(i, c, python, java)
+  var i int
+  fmt.Println(i, c, python, java)
 }
 ```
 </td>
@@ -107,11 +107,11 @@ package main
 import "fmt"
 
 func main() {
-	var i, j int = 1, 2
-	k := 3
-	c, python, java := true, false, "no!"
+  var i, j int = 1, 2
+  k := 3
+  c, python, java := true, false, "no!"
 
-	fmt.Println(i, j, k, c, python, java)
+  fmt.Println(i, j, k, c, python, java)
 }
 ```
 </td></tr></tbody></table>
@@ -124,15 +124,15 @@ Support convert value to Type
 package main
 
 import (
-	"fmt"
-	"math"
+  "fmt"
+  "math"
 )
 
 func main() {
-	var x, y int = 3, 4
-	var f float64 = math.Sqrt(float64(x*x + y*y))
-	var z uint = uint(f)
-	fmt.Println(x, y, z)
+  var x, y int = 3, 4
+  var f float64 = math.Sqrt(float64(x*x + y*y))
+  var z uint = uint(f)
+  fmt.Println(x, y, z)
 }
 
 ```
@@ -157,11 +157,11 @@ package main
 import "fmt"
 
 func main() {
-	sum := 0
-	for i := 0; i < 10; i++ {
-		sum += i
-	}
-	fmt.Println(sum)
+  sum := 0
+  for i := 0; i < 10; i++ {
+    sum += i
+  }
+  fmt.Println(sum)
 }
 ```
 </td>
@@ -173,11 +173,11 @@ package main
 import "fmt"
 
 func main() {
-	sum := 1
-	for sum < 1000 {
-		sum += sum
-	}
-	fmt.Println(sum)
+  sum := 1
+  for sum < 1000 {
+    sum += sum
+  }
+  fmt.Println(sum)
 }
 ```
 </td></tr></tbody></table>
@@ -193,9 +193,9 @@ package main
 import "fmt"
 
 func main() {
-	defer fmt.Println("world")
+  defer fmt.Println("world")
 
-	fmt.Println("hello")
+  fmt.Println("hello")
 }
 ```
 
@@ -210,15 +210,15 @@ package main
 import "fmt"
 
 type Vertex struct {
-	X int
-	Y int
+  X int
+  Y int
 }
 
 func main() {
-	v := Vertex{1, 2}
-	p := &v
-	p.X = 1e9
-	fmt.Println(v)
+  v := Vertex{1, 2}
+  p := &v
+  p.X = 1e9
+  fmt.Println(v)
 }
 ```
 
@@ -233,14 +233,14 @@ package main
 import "fmt"
 
 func main() {
-	var a [2]string
-	a[0] = "Hello"
-	a[1] = "World"
-	fmt.Println(a[0], a[1])
-	fmt.Println(a)
+  var a [2]string
+  a[0] = "Hello"
+  a[1] = "World"
+  fmt.Println(a[0], a[1])
+  fmt.Println(a)
 
-	primes := [6]int{2, 3, 5, 7, 11, 13}
-	fmt.Println(primes)
+  primes := [6]int{2, 3, 5, 7, 11, 13}
+  fmt.Println(primes)
 }
 ```
 
@@ -266,10 +266,10 @@ package main
 import "fmt"
 
 func main() {
-	primes := [6]int{2, 3, 5, 7, 11, 13}
+  primes := [6]int{2, 3, 5, 7, 11, 13}
 
-	var s []int = primes[1:4]
-	fmt.Println(s, primes)
+  var s []int = primes[1:4]
+  fmt.Println(s, primes)
 }
 ```
 </td>
@@ -281,22 +281,22 @@ package main
 import "fmt"
 
 func main() {
-	a := make([]int, 5)
-	printSlice("a", a)
+  a := make([]int, 5)
+  printSlice("a", a)
 
-	b := make([]int, 0, 5)
-	printSlice("b", b)
+  b := make([]int, 0, 5)
+  printSlice("b", b)
 
-	c := b[:2]
-	printSlice("c", c)
+  c := b[:2]
+  printSlice("c", c)
 
-	d := c[2:5]
-	printSlice("d", d)
+  d := c[2:5]
+  printSlice("d", d)
 }
 
 func printSlice(s string, x []int) {
-	fmt.Printf("%s len=%d cap=%d %v\n",
-		s, len(x), cap(x), x)
+  fmt.Printf("%s len=%d cap=%d %v\n",
+    s, len(x), cap(x), x)
 }
 ```
 </td></tr></tbody></table>
@@ -314,9 +314,9 @@ import "fmt"
 var pow = []int{1, 2, 4, 8, 16, 32, 64, 128}
 
 func main() {
-	for i, v := range pow {
-		fmt.Printf("2**%d = %d\n", i, v)
-	}
+  for i, v := range pow {
+    fmt.Printf("2**%d = %d\n", i, v)
+  }
 }
 ```
 
@@ -329,21 +329,21 @@ Method is a function of struct.
 package main
 
 import (
-	"fmt"
-	"math"
+  "fmt"
+  "math"
 )
 
 type Vertex struct {
-	X, Y float64
+  X, Y float64
 }
 
 func (v Vertex) Abs() float64 {
-	return math.Sqrt(v.X*v.X + v.Y*v.Y)
+  return math.Sqrt(v.X*v.X + v.Y*v.Y)
 }
 
 func main() {
-	v := Vertex{3, 4}
-	fmt.Println(v.Abs())
+  v := Vertex{3, 4}
+  fmt.Println(v.Abs())
 }
 ```
 
@@ -356,52 +356,67 @@ An interface type is defined as a set of method signatures.
 package main
 
 import (
-	"fmt"
-	"math"
+  "fmt"
+  "math"
 )
 
 type Abser interface {
-	Abs() float64
+  Abs() float64
 }
 
 func main() {
-	var a Abser
-	f := MyFloat(-math.Sqrt2)
-	v := Vertex{3, 4}
+  var a Abser
+  f := MyFloat(-math.Sqrt2)
+  v := Vertex{3, 4}
 
-	a = f  // a MyFloat implements Abser
-	a = &v // a *Vertex implements Abser
+  a = f  // a MyFloat implements Abser
+  a = &v // a *Vertex implements Abser
 
-	// In the following line, v is a Vertex (not *Vertex)
-	// and does NOT implement Abser.
-	a = v
+  // In the following line, v is a Vertex (not *Vertex)
+  // and does NOT implement Abser.
+  a = v
 
-	fmt.Println(a.Abs())
+  fmt.Println(a.Abs())
 }
 
 type MyFloat float64
 
 func (f MyFloat) Abs() float64 {
-	if f < 0 {
-		return float64(-f)
-	}
-	return float64(f)
+  if f < 0 {
+    return float64(-f)
+  }
+  return float64(f)
 }
 
 type Vertex struct {
-	X, Y float64
+  X, Y float64
 }
 
 func (v *Vertex) Abs() float64 {
-	return math.Sqrt(v.X*v.X + v.Y*v.Y)
+  return math.Sqrt(v.X*v.X + v.Y*v.Y)
 }
 ```
 
 ### Exercises:
-#### After finished the basic syntax, you should do these exercises
-- Exercise 1: A CRUD REST API with Mux and My SQL, table users, with these fields fields id, username, email, phone, dateOfBirth, and methods GetAll, GetByID, Insert, Update, Delete (Refer to [go-sql-tutorial](https://github.com/go-tutorials/go-sql-tutorial))
-- Exercise 2: A CRUD REST API with Mux and MongoDB: collection user, with these fields id, username, email, phone, dateOfBirth, and methods: GetAll, GetByID, Insert, Update, Delete (Refer to [go-mongo-tutorial](https://github.com/go-tutorials/go-sql-tutorial))
-- Exercise 3: A CRUD REST API with Mux and gorm with My SQL: collection user, with these fields id, username, email, phone, dateOfBirth, and methods: GetAll, GetByID, Insert, Update, Delete (Refer to [gorm-tutorial](https://github.com/go-tutorials/gorm-tutorial))
+After finished the basic syntax, you should do these exercises
+#### Exercise 1
+- Create a CRUD REST API with [mux](https://github.com/gorilla/mux) and My SQL, table users, with these fields fields id, username, email, phone, dateOfBirth, and methods GetAll, GetByID, Insert, Update, Delete (Refer to [go-sql-tutorial](https://github.com/go-tutorials/go-sql-tutorial))
+- Objectives:
+  - Understand how to query data from RMS database, using "database/sql" package
+  - Can insert, update, delete data
+  - Understand how to use Mux to receive an http request, and return an http response
+#### Exercise 2
+- Create a CRUD REST API with [gin](https://github.com/gin-gonic/gin) and [MongoDB](https://go.mongodb.org/mongo-driver): collection user, with these fields id, username, email, phone, dateOfBirth, and methods: GetAll, GetByID, Insert, Update, Delete (Refer to [go-mongo-tutorial](https://github.com/go-tutorials/go-sql-tutorial) and [go-gin-sql-tutorial](https://github.com/go-tutorials/go-gin-sql-tutorial))
+- Objectives:
+  - Understand how to query data from Mongo
+  - Can insert, update, delete data
+  - Understand how to use [gin](https://github.com/gin-gonic/gin) to receive an http request, and return an http response
+#### Exercise 3
+- Create a CRUD REST API with [echo](https://github.com/labstack/echo) and [gorm](https://gorm.io) with My SQL: collection user, with these fields id, username, email, phone, dateOfBirth, and methods: GetAll, GetByID, Insert, Update, Delete (Refer to [gorm-tutorial](https://github.com/go-tutorials/gorm-tutorial) and [go-echo-sql-tutorial](https://github.com/go-tutorials/go-echo-sql-tutorial))
+  - Understand how to query data from RMS database, using [gorm](https://gorm.io)
+  - Can insert, update, delete data
+  - Understand how to use [echo](https://github.com/labstack/echo) to receive an http request, and return an http response
+#### Script to create database for Exercise 1 and Exercise 3
 ```sql
 -- script to create database for exercise 1, exercise 3
 create table if not exists users (
@@ -417,6 +432,85 @@ insert into users (id, username, email, phone, date_of_birth) values ('ironman',
 insert into users (id, username, email, phone, date_of_birth) values ('spiderman', 'peter.parker', 'peter.parker@gmail.com', '0987654321', '1962-08-25');
 insert into users (id, username, email, phone, date_of_birth) values ('wolverine', 'james.howlett', 'james.howlett@gmail.com', '0987654321', '1974-11-16');
 ```
+
+## Real project samples
+### Layer Architecture Samples
+- To build a REST API to support
+  - search, get by ID, create, update, delete
+  - support "patch" method, using [core-go/service](https://github.com/core-go/service)
+  - support "search" method, using [core-go/search](https://github.com/core-go/search)
+- Apply 3 tier architecture: handler, service (business logic) and repository
+  - Each layer is put in a separated package
+- Some standard features
+  - config: load config from yaml files
+  - [health check](https://github.com/core-go/health): to check health of SQL 
+  - logging: can use [logrus](https://github.com/sirupsen/logrus) or [zap](https://github.com/uber-go/zap) to log, support to switch between [logrus](https://github.com/sirupsen/logrus) or [zap](https://github.com/uber-go/zap)
+  - log tracing by at the middle the http request and http response
+#### [go-sql-layer-architecture-sample](https://github.com/source-code-template/go-sql-layer-architecture-sample)
+- A micro service with [mux](https://github.com/gorilla/mux) and SQL
+- At SQL layer, support "patch", using [core-go/sql](https://github.com/core-go/sql)
+
+#### [go-mongo-layer-architecture-sample](https://github.com/source-code-template/go-mongo-layer-architecture-sample)
+- A micro service with [mux](https://github.com/gorilla/mux) and [MongoDB](https://go.mongodb.org/mongo-driver)
+- At mongo layer, support "patch", using [core-go/mongo](https://github.com/core-go/mongo)
+
+### Modular Samples
+- To build a REST API to support
+  - search, get by ID, create, update, delete
+  - support "patch" method, using [core-go/service](https://github.com/core-go/service)
+  - support "search" method, using [core-go/search](https://github.com/core-go/search)
+- 3 layers are put into the same package (handler, service (business logic) and repository)
+- Some standard features
+  - config: load config from yaml files
+  - [health check](https://github.com/core-go/health): to check health of SQL 
+  - [logging](https://github.com/core-go/log): can use [logrus](https://github.com/sirupsen/logrus) or [zap](https://github.com/uber-go/zap) to log, support to switch between [logrus](https://github.com/sirupsen/logrus) or [zap](https://github.com/uber-go/zap)
+  - log tracing by at the [middleware](https://github.com/core-go/log/tree/main/middleware) the http request and http response 
+#### [go-sql-modular-sample](https://github.com/source-code-template/go-sql-modular-sample)
+- A micro service with [mux](https://github.com/gorilla/mux) and SQL
+- At SQL layer, support "patch", using [core-go/sql](https://github.com/core-go/sql)
+
+#### [go-mongo-modular-sample](https://github.com/source-code-template/go-mongo-modular-sample)
+- A micro service with [mux](https://github.com/gorilla/mux) and [MongoDB](https://go.mongodb.org/mongo-driver)
+- At mongo layer, support "patch", using [core-go/mongo](https://github.com/core-go/mongo)
+
+### Message Queue Samples
+#### [go-subscription](https://github.com/project-samples/go-subscription)
+- Consume a message from queue, then write the message to database (SQL, Mongo, Casandra, Dynamodb, Firestore, Elasticsearch)
+- Use [core-go/mq](https://github.com/core-go/mq)
+- Support these message queues:
+  - Amazon Simple Queue Service (SQS) at [sqs](https://github.com/core-go/mq/tree/main/sqs)
+  - Google Cloud Pub/Sub at [pubsub](https://github.com/core-go/mq/tree/main/pubsub)
+  - Kafka: at [segmentio/kafka-go](https://github.com/core-go/mq/tree/main/kafka), [Shopify/sarama](https://github.com/core-go/mq/tree/main/sarama) and [confluent](https://github.com/core-go/mq/tree/main/confluent)
+  - NATS at [nats](https://github.com/core-go/mq/tree/main/nats)
+  - Active MQ at [amq](https://github.com/core-go/mq/tree/main/amq)
+  - RabbitMQ at [rabbitmq](https://github.com/core-go/mq/tree/main/rabbitmq)
+  - IBM MQ at [ibm-mq](https://github.com/core-go/mq/tree/main/ibm-mq)
+- Support these databases
+  - SQL
+  - Mongo
+  - Casandra
+  - Dynamodb
+  - Firestore
+  - Elasticsearch
+
+#### [go-batch-subscription](https://github.com/project-samples/go-batch-subscription)
+- Consume a message from queue one by one
+- After the configured interval time (for example, 5 seconds) or reach the batch size (for example, reach 1000 messages), write all messages (1000 messages) to database (SQL, Mongo, Casandra, Dynamodb, Firestore, Elasticsearch)
+#### [go-admin](https://github.com/project-samples/go-admin)
+User and role management, with these features:
+- Authentication
+  - Log in by LDAP
+  - After logged in, get all privileges based on roles of that user
+- Separate the "read" and "write" permissions for 1 role, using bitwise. For example:
+  - 001 (1 in decimal) is "read" permission
+  - 010 (2 in decimal) is "write" permission
+  - 100 (4 in decimal) is "delete" permission
+  - "read" and "write" permission will be "001 | 010 = 011" (011 is 3 in decimal)
+- Some standard features
+  - config: load config from yaml files
+  - [health check](https://github.com/core-go/health): to check health of SQL 
+  - [logging](https://github.com/core-go/log): can use [logrus](https://github.com/sirupsen/logrus) or [zap](https://github.com/uber-go/zap) to log, support to switch between [logrus](https://github.com/sirupsen/logrus) or [zap](https://github.com/uber-go/zap)
+  - log tracing by at the [middleware](https://github.com/core-go/log/tree/main/middleware) the http request and http response
 
 ## Tutorials
 ### SQL
