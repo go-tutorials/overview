@@ -19,7 +19,7 @@ package main
 import "fmt"
 
 func main() {
-  fmt.Println("Hello, world")
+    fmt.Println("Hello, world")
 }
 ```
 
@@ -124,17 +124,16 @@ Support convert value to Type
 package main
 
 import (
-  "fmt"
-  "math"
+    "fmt"
+    "math"
 )
 
 func main() {
-  var x, y int = 3, 4
-  var f float64 = math.Sqrt(float64(x*x + y*y))
-  var z uint = uint(f)
-  fmt.Println(x, y, z)
+    var x, y int = 3, 4
+    var f float64 = math.Sqrt(float64(x*x + y*y))
+    var z uint = uint(f)
+    fmt.Println(x, y, z)
 }
-
 ```
 #### Loop
 Declare variables
@@ -193,9 +192,9 @@ package main
 import "fmt"
 
 func main() {
-  defer fmt.Println("world")
+    defer fmt.Println("world")
 
-  fmt.Println("hello")
+    fmt.Println("hello")
 }
 ```
 
@@ -210,15 +209,15 @@ package main
 import "fmt"
 
 type Vertex struct {
-  X int
-  Y int
+    X int
+    Y int
 }
 
 func main() {
-  v := Vertex{1, 2}
-  p := &v
-  p.X = 1e9
-  fmt.Println(v)
+    v := Vertex{1, 2}
+    p := &v
+    p.X = 1e9
+    fmt.Println(v)
 }
 ```
 
@@ -233,14 +232,14 @@ package main
 import "fmt"
 
 func main() {
-  var a [2]string
-  a[0] = "Hello"
-  a[1] = "World"
-  fmt.Println(a[0], a[1])
-  fmt.Println(a)
+    var a [2]string
+    a[0] = "Hello"
+    a[1] = "World"
+    fmt.Println(a[0], a[1])
+    fmt.Println(a)
 
-  primes := [6]int{2, 3, 5, 7, 11, 13}
-  fmt.Println(primes)
+    primes := [6]int{2, 3, 5, 7, 11, 13}
+    fmt.Println(primes)
 }
 ```
 
@@ -314,9 +313,9 @@ import "fmt"
 var pow = []int{1, 2, 4, 8, 16, 32, 64, 128}
 
 func main() {
-  for i, v := range pow {
-    fmt.Printf("2**%d = %d\n", i, v)
-  }
+    for i, v := range pow {
+        fmt.Printf("2**%d = %d\n", i, v)
+    }
 }
 ```
 
@@ -329,21 +328,21 @@ Method is a function of struct.
 package main
 
 import (
-  "fmt"
-  "math"
+    "fmt"
+    "math"
 )
 
 type Vertex struct {
-  X, Y float64
+    X, Y float64
 }
 
 func (v Vertex) Abs() float64 {
-  return math.Sqrt(v.X*v.X + v.Y*v.Y)
+    return math.Sqrt(v.X*v.X + v.Y*v.Y)
 }
 
 func main() {
-  v := Vertex{3, 4}
-  fmt.Println(v.Abs())
+    v := Vertex{3, 4}
+    fmt.Println(v.Abs())
 }
 ```
 
@@ -356,44 +355,44 @@ An interface type is defined as a set of method signatures.
 package main
 
 import (
-  "fmt"
-  "math"
+    "fmt"
+    "math"
 )
 
 type Abser interface {
-  Abs() float64
+    Abs() float64
 }
 
 func main() {
-  var a Abser
-  f := MyFloat(-math.Sqrt2)
-  v := Vertex{3, 4}
+    var a Abser
+    f := MyFloat(-math.Sqrt2)
+    v := Vertex{3, 4}
 
-  a = f  // a MyFloat implements Abser
-  a = &v // a *Vertex implements Abser
+    a = f    // a MyFloat implements Abser
+    a = &v // a *Vertex implements Abser
 
-  // In the following line, v is a Vertex (not *Vertex)
-  // and does NOT implement Abser.
-  a = v
+    // In the following line, v is a Vertex (not *Vertex)
+    // and does NOT implement Abser.
+    a = v
 
-  fmt.Println(a.Abs())
+    fmt.Println(a.Abs())
 }
 
 type MyFloat float64
 
 func (f MyFloat) Abs() float64 {
-  if f < 0 {
-    return float64(-f)
-  }
-  return float64(f)
+    if f < 0 {
+        return float64(-f)
+    }
+    return float64(f)
 }
 
 type Vertex struct {
-  X, Y float64
+    X, Y float64
 }
 
 func (v *Vertex) Abs() float64 {
-  return math.Sqrt(v.X*v.X + v.Y*v.Y)
+    return math.Sqrt(v.X*v.X + v.Y*v.Y)
 }
 ```
 
