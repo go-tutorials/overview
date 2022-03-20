@@ -4,10 +4,9 @@
 ### Introduction to GO
 #### Overview 
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/446E-r0rXHI/0.jpg)](http://www.youtube.com/watch?v=446E-r0rXHI "Introduction to GO")
-#### Introduction
-[![IMAGE ALT TEXT](http://img.youtube.com/vi/75lJDVT1h0s/0.jpg)](http://www.youtube.com/watch?v=75lJDVT1h0s&list=PLzMcBGfZo4-mtY_SE3HuzQJzuj4VlUG0q&index=1&ab_channel=TechWithTim "Introduction to GO")
 ### Basic GO
 - To learn the basic syntax, you can start at https://go.dev/tour
+- [Training slide is here](https://www.slideshare.net/MinhDucNguyen74/go-tutorial-251383541)  
 #### Hello world
 - Every Go program is made up of packages
 - Start running in package main
