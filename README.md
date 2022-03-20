@@ -11,8 +11,8 @@
 #### Hello world
 - Every Go program is made up of packages
 - Start running in package main
-- Run here https://go.dev/tour/welcome/1
-- In this sample, use “fmt” package to print a string to console
+  - Run here https://go.dev/tour/welcome/1
+  - In this sample, use “fmt” package to print a string to console
 ```go
 package main
 
@@ -182,7 +182,7 @@ func main() {
 </td></tr></tbody></table>
 
 #### Defer
-A defer statement defers the execution of a function until the surrounding function return.
+A defer statement defers the execution of a function until the surrounding function return
 ##### Exercise 1: Print “hello world” with defer
 - Run here https://go.dev/tour/flowcontrol/12
 
@@ -199,7 +199,7 @@ func main() {
 ```
 
 #### Pointer
-Struct fields can be accessed through a struct pointer.
+Struct fields can be accessed through a struct pointer
 ##### Exercise 1: Access a struct with a struct pointer
 - Run here https://go.dev/tour/moretypes/4
 
@@ -222,7 +222,7 @@ func main() {
 ```
 
 #### Array
-Arrays cannot be resized.
+Arrays cannot be resized
 ##### Exercise 1: Create arrays with string & int
 - Run here https://go.dev/tour/moretypes/6
 
@@ -301,7 +301,7 @@ func printSlice(s string, x []int) {
 </td></tr></tbody></table>
 
 #### Range
-The range form of the for loop iterates over a slice or map.
+The range form of the for loop iterates over a slice or map
 ##### Exercise 1: Loop a slice and print 2 powers
 - Run here https://go.dev/tour/moretypes/16
 
@@ -320,7 +320,7 @@ func main() {
 ```
 
 #### Method
-Method is a function of struct.
+Method is a function of struct
 ##### Exercise 1: Create a method, with struct receiver
 - Run here https://go.dev/tour/methods/1
 
@@ -347,7 +347,7 @@ func main() {
 ```
 
 #### Interface
-An interface type is defined as a set of method signatures.
+An interface type is defined as a set of method signatures
 ##### Exercise 1: Create a method, with struct receiver
 - Run here https://go.dev/tour/methods/9
 
