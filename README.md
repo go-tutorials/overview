@@ -25,10 +25,10 @@ func main() {
 
 #### Function
 Support to return multiple values
-##### Exercise 1: write a function, to add 2 integer numbers
-- Run here https://go.dev/tour/basics/5
-##### Exercise 2: write a function, to swap 2 strings
-- Run here https://go.dev/tour/basics/6
+- Exercise 1: write a function, to add 2 integer numbers
+  - Run here https://go.dev/tour/basics/5
+- Exercise 2: write a function, to swap 2 strings
+  - Run here https://go.dev/tour/basics/6
 
 <table><thead><tr><td>
 
@@ -73,10 +73,10 @@ func main() {
 
 #### Variables
 Declare variables
-##### Exercise 1: Use “var” to declare 3 variables
-- Run here https://go.dev/tour/basics/8 
-##### Exercise 2: Use short variables declarations
-- Run here https://go.dev/tour/basics/10
+- Exercise 1: Use “var” to declare 3 variables
+  - Run here https://go.dev/tour/basics/8 
+- Exercise 2: Use short variables declarations
+  - Run here https://go.dev/tour/basics/10
 
 <table><thead><tr><td>
 
@@ -116,9 +116,9 @@ func main() {
 ```
 </td></tr></tbody></table>
 
-Support convert value to Type
-##### Exercise 1: use expression T(v) to convert some number
-- Run here https://go.dev/tour/basics/13 
+#### Convert type
+- Use expression T(v) to convert some number
+  - Run here https://go.dev/tour/basics/13 
 
 ```go
 package main
@@ -137,10 +137,10 @@ func main() {
 ```
 #### Loop
 Declare variables
-##### Exercise 1: Total from 1 to 10
-- Run here https://go.dev/tour/flowcontrol/1 
-##### Exercise 2: Total from 1 to 10, with "while" loop logic
-- Run here https://go.dev/tour/flowcontrol/3
+- Exercise 1: Total from 1 to 10
+  - Run here https://go.dev/tour/flowcontrol/1 
+- Exercise 2: Total from 1 to 10, with "while" loop logic
+  - Run here https://go.dev/tour/flowcontrol/3
 
 <table><thead><tr><td>
 
@@ -183,8 +183,8 @@ func main() {
 
 #### Defer
 A defer statement defers the execution of a function until the surrounding function return
-##### Exercise 1: Print “hello world” with defer
-- Run here https://go.dev/tour/flowcontrol/12
+- Exercise: Print “hello world” with defer
+  - Run here https://go.dev/tour/flowcontrol/12
 
 ```go
 package main
@@ -200,8 +200,8 @@ func main() {
 
 #### Pointer
 Struct fields can be accessed through a struct pointer
-##### Exercise 1: Access a struct with a struct pointer
-- Run here https://go.dev/tour/moretypes/4
+- Exercise: Access a struct with a struct pointer
+  - Run here https://go.dev/tour/moretypes/4
 
 ```go
 package main
@@ -223,8 +223,8 @@ func main() {
 
 #### Array
 Arrays cannot be resized
-##### Exercise 1: Create arrays with string & int
-- Run here https://go.dev/tour/moretypes/6
+- Exercise: Create arrays with string & int
+  - Run here https://go.dev/tour/moretypes/6
 
 ```go
 package main
@@ -245,11 +245,10 @@ func main() {
 
 #### Slice
 A dynamically-sized
-
-##### Exercise 1: Create a slice from an array
-- Run here https://go.dev/tour/moretypes/7
-##### Exercise 2: Create a slice from an array
-- Run here https://go.dev/tour/moretypes/13
+- Exercise 1: Create a slice from an array
+  - Run here https://go.dev/tour/moretypes/7
+- Exercise 2: Create a slice from an array
+  - Run here https://go.dev/tour/moretypes/13
 
 <table><thead><tr><td>
 
@@ -302,8 +301,8 @@ func printSlice(s string, x []int) {
 
 #### Range
 The range form of the for loop iterates over a slice or map
-##### Exercise 1: Loop a slice and print 2 powers
-- Run here https://go.dev/tour/moretypes/16
+- Exercise: Loop a slice and print 2 powers
+  - Run here https://go.dev/tour/moretypes/16
 
 ```go
 package main
@@ -321,8 +320,8 @@ func main() {
 
 #### Method
 Method is a function of struct
-##### Exercise 1: Create a method, with struct receiver
-- Run here https://go.dev/tour/methods/1
+- Exercise: Create a method, with struct receiver
+  - Run here https://go.dev/tour/methods/1
 
 ```go
 package main
@@ -348,8 +347,8 @@ func main() {
 
 #### Interface
 An interface type is defined as a set of method signatures
-##### Exercise 1: Create a method, with struct receiver
-- Run here https://go.dev/tour/methods/9
+- Exercise: Create a method, with struct receiver
+  - Run here https://go.dev/tour/methods/9
 
 ```go
 package main
