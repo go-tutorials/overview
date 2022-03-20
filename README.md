@@ -443,8 +443,8 @@ insert into users (id, username, email, phone, date_of_birth) values ('wolverine
 - Some standard features
   - config: load config from yaml files
   - [health check](https://github.com/core-go/health): to check health of SQL 
-  - logging: can use [logrus](https://github.com/sirupsen/logrus) or [zap](https://github.com/uber-go/zap) to log, support to switch between [logrus](https://github.com/sirupsen/logrus) or [zap](https://github.com/uber-go/zap)
-  - log tracing by at the middle the http request and http response
+  - [logging](https://github.com/core-go/log): can use [logrus](https://github.com/sirupsen/logrus) or [zap](https://github.com/uber-go/zap) to log, support to switch between [logrus](https://github.com/sirupsen/logrus) or [zap](https://github.com/uber-go/zap)
+  - log tracing by at the [middleware](https://github.com/core-go/log/tree/main/middleware) the http request and http response
 #### [go-sql-layer-architecture-sample](https://github.com/source-code-template/go-sql-layer-architecture-sample)
 - A micro service with [mux](https://github.com/gorilla/mux) and SQL
 - At SQL layer, support "patch", using [core-go/sql](https://github.com/core-go/sql)
