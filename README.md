@@ -6,7 +6,9 @@
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/446E-r0rXHI/0.jpg)](http://www.youtube.com/watch?v=446E-r0rXHI "Introduction to GO")
 ### Basic GO
 - To learn the basic syntax, you can start at https://go.dev/tour
-- [Training slide is here](https://www.slideshare.net/MinhDucNguyen74/go-tutorial-251383541)  
+- <b>View</b> online training slide at [here](https://www.slideshare.net/MinhDucNguyen74/go-tutorial-251383541)
+- <b>Download</b> training slide at [here](https://github.com/go-tutorials/overview/blob/main/go-tutorial.pptx)
+
 #### Hello world
 - Every Go program is made up of packages
 - Start running in package main
@@ -397,22 +399,27 @@ func (v *Vertex) Abs() float64 {
 ### Exercises:
 After finished the basic syntax, you should do these exercises
 #### Exercise 1
-- Create a CRUD REST API with [mux](https://github.com/gorilla/mux) and My SQL, table users, with these fields fields id, username, email, phone, dateOfBirth, and methods GetAll, GetByID, Insert, Update, Delete (Refer to [go-sql-tutorial](https://github.com/go-tutorials/go-sql-tutorial))
 - Objectives:
   - Understand how to query data from RMS database, using "database/sql" package
   - Can insert, update, delete data
   - Understand how to use Mux to receive an http request, and return an http response
+- Create a CRUD REST API with [mux](https://github.com/gorilla/mux) and My SQL, table users, with these fields fields id, username, email, phone, dateOfBirth, and methods GetAll, GetByID, Insert, Update, Delete
+  - Refer to [go-sql-tutorial](https://github.com/go-tutorials/go-sql-tutorial)
 #### Exercise 2
-- Create a CRUD REST API with [gin](https://github.com/gin-gonic/gin) and [MongoDB](https://go.mongodb.org/mongo-driver): collection user, with these fields id, username, email, phone, dateOfBirth, and methods: GetAll, GetByID, Insert, Update, Delete (Refer to [go-mongo-tutorial](https://github.com/go-tutorials/go-sql-tutorial) and [go-gin-sql-tutorial](https://github.com/go-tutorials/go-gin-sql-tutorial))
 - Objectives:
   - Understand how to query data from Mongo
   - Can insert, update, delete data
   - Understand how to use [gin](https://github.com/gin-gonic/gin) to receive an http request, and return an http response
+- Create a CRUD REST API with [gin](https://github.com/gin-gonic/gin) and [MongoDB](https://go.mongodb.org/mongo-driver): collection user, with these fields id, username, email, phone, dateOfBirth, and methods: GetAll, GetByID, Insert, Update, Delete
+  - Refer to [go-mongo-tutorial](https://github.com/go-tutorials/go-sql-tutorial) and [go-gin-sql-tutorial](https://github.com/go-tutorials/go-gin-sql-tutorial)
 #### Exercise 3
-- Create a CRUD REST API with [echo](https://github.com/labstack/echo) and [gorm](https://gorm.io) with My SQL: collection user, with these fields id, username, email, phone, dateOfBirth, and methods: GetAll, GetByID, Insert, Update, Delete (Refer to [gorm-tutorial](https://github.com/go-tutorials/gorm-tutorial) and [go-echo-sql-tutorial](https://github.com/go-tutorials/go-echo-sql-tutorial))
+- Objectives:
   - Understand how to query data from RMS database, using [gorm](https://gorm.io)
   - Can insert, update, delete data
   - Understand how to use [echo](https://github.com/labstack/echo) to receive an http request, and return an http response
+- Create a CRUD REST API with [echo](https://github.com/labstack/echo) and [gorm](https://gorm.io) with My SQL: collection user, with these fields id, username, email, phone, dateOfBirth, and methods: GetAll, GetByID, Insert, Update, Delete
+  - Refer to [gorm-tutorial](https://github.com/go-tutorials/gorm-tutorial) and [go-echo-sql-tutorial](https://github.com/go-tutorials/go-echo-sql-tutorial)
+
 #### Script to create database for Exercise 1 and Exercise 3
 ```sql
 -- script to create database for exercise 1, exercise 3
@@ -432,6 +439,11 @@ insert into users (id, username, email, phone, date_of_birth) values ('wolverine
 
 ## Real project samples
 ### Layer Architecture Samples
+#### Layer Architecture
+![Layer Architecture](https://camo.githubusercontent.com/d9b21eb50ef70dcaebf5a874559608f475e22c799bc66fcf99fb01f08576540f/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a4a4459546c4b3030796730496c556a5a392d737037512e706e67)
+#### Layer Architecture with standard features: config, health check, logging, middleware log tracing, data validation
+![Layer Architecture with standard features: config, health check, logging, middleware log tracing, data validation](https://camo.githubusercontent.com/903f9ae0aff009111bedd6e86351f66e237eb303d279c8bab551ddb6ba52debd/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a38556a4a53765f74573078424b46584b5a7538364d412e706e67)
+
 - To build a REST API to support
   - search, get by ID, create, update, delete
   - support "patch" method, using [core-go/service](https://github.com/core-go/service)
@@ -439,7 +451,7 @@ insert into users (id, username, email, phone, date_of_birth) values ('wolverine
 - Apply 3 tier architecture: handler, service (business logic) and repository
   - Each layer is put in a separated package
 - Some standard features
-  - config: load config from yaml files
+  - [config](https://github.com/core-go/config): load config from yaml files
   - [health check](https://github.com/core-go/health): to check health of SQL 
   - [logging](https://github.com/core-go/log): can use [logrus](https://github.com/sirupsen/logrus) or [zap](https://github.com/uber-go/zap) to log, support to switch between [logrus](https://github.com/sirupsen/logrus) or [zap](https://github.com/uber-go/zap)
   - log tracing by at the [middleware](https://github.com/core-go/log/tree/main/middleware) the http request and http response
@@ -452,13 +464,15 @@ insert into users (id, username, email, phone, date_of_birth) values ('wolverine
 - At mongo layer, support "patch", using [core-go/mongo](https://github.com/core-go/mongo)
 
 ### Modular Samples
+![Modular](https://camo.githubusercontent.com/c17d4dfaab39cf7223f7775c9e973bb936e4169e8bd0011659e83cec755c8f26/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a42526b437272622d5f417637395167737142556b48672e706e67)
+
 - To build a REST API to support
   - search, get by ID, create, update, delete
   - support "patch" method, using [core-go/service](https://github.com/core-go/service)
   - support "search" method, using [core-go/search](https://github.com/core-go/search)
 - 3 layers are put into the same package (handler, service (business logic) and repository)
 - Some standard features
-  - config: load config from yaml files
+  - [config](https://github.com/core-go/config): load config from yaml files
   - [health check](https://github.com/core-go/health): to check health of SQL 
   - [logging](https://github.com/core-go/log): can use [logrus](https://github.com/sirupsen/logrus) or [zap](https://github.com/uber-go/zap) to log, support to switch between [logrus](https://github.com/sirupsen/logrus) or [zap](https://github.com/uber-go/zap)
   - log tracing by at the [middleware](https://github.com/core-go/log/tree/main/middleware) the http request and http response 
@@ -494,17 +508,20 @@ insert into users (id, username, email, phone, date_of_birth) values ('wolverine
 - Consume a message from queue one by one
 - After the configured interval time (for example, 5 seconds) or reach the batch size (for example, reach 1000 messages), write all messages (1000 messages) to database (SQL, Mongo, Casandra, Dynamodb, Firestore, Elasticsearch)
 #### [go-admin](https://github.com/project-samples/go-admin)
+##### Architecture
+![User Role Service](https://camo.githubusercontent.com/e5cb06a624c11221573047e160f899eb15a3a2482f64759577dd480635dcb59c/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a6856376e4c57746b6a2d7170355675706c5a664778672e706e67)
+
 User and role management, with these features:
 - Authentication
   - Log in by LDAP
   - After logged in, get all privileges based on roles of that user
-- Separate the "read" and "write" permissions for 1 role, using bitwise. For example:
+- Authorization: Separate the "read" and "write" permissions for 1 role, using bitwise. For example:
   - 001 (1 in decimal) is "read" permission
   - 010 (2 in decimal) is "write" permission
   - 100 (4 in decimal) is "delete" permission
   - "read" and "write" permission will be "001 | 010 = 011" (011 is 3 in decimal)
-- Some standard features
-  - config: load config from yaml files
+- Some other standard features
+  - [config](https://github.com/core-go/config): load config from yaml files
   - [health check](https://github.com/core-go/health): to check health of SQL 
   - [logging](https://github.com/core-go/log): can use [logrus](https://github.com/sirupsen/logrus) or [zap](https://github.com/uber-go/zap) to log, support to switch between [logrus](https://github.com/sirupsen/logrus) or [zap](https://github.com/uber-go/zap)
   - log tracing by at the [middleware](https://github.com/core-go/log/tree/main/middleware) the http request and http response
