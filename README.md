@@ -487,6 +487,7 @@ insert into users (id, username, email, phone, date_of_birth) values ('wolverine
 ### Message Queue Samples
 #### [go-subscription](https://github.com/project-samples/go-subscription)
 - Consume a message from queue, then write the message to database (SQL, Mongo, Casandra, Dynamodb, Firestore, Elasticsearch)
+![Flow to consume a message](https://camo.githubusercontent.com/782bbf69a516401c3918b7e920d8fc25521112d8b04e890f2455768551f6d64e/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a593451554e36516e666d4a67614b6967634e486251412e706e67)
 - Use [core-go/mq](https://github.com/core-go/mq)
 - Support these message queues:
   - Amazon Simple Queue Service (SQS) at [sqs](https://github.com/core-go/mq/tree/main/sqs)
@@ -509,7 +510,7 @@ insert into users (id, username, email, phone, date_of_birth) values ('wolverine
 - After the configured interval time (for example, 5 seconds) or reach the batch size (for example, reach 1000 messages), write all messages (1000 messages) to database (SQL, Mongo, Casandra, Dynamodb, Firestore, Elasticsearch)
 #### [go-admin](https://github.com/project-samples/go-admin)
 ##### Architecture
-![User Role Service](https://camo.githubusercontent.com/e5cb06a624c11221573047e160f899eb15a3a2482f64759577dd480635dcb59c/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a6856376e4c57746b6a2d7170355675706c5a664778672e706e67)
+![User Role Service](https://camo.githubusercontent.com/f1a6b2ab439fc638303e2268bf2068c2def79ddefa5c53564c846cfee46ac63a/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a562d466e76434966546641344a715a6d596856476a512e706e67)
 
 User and role management, with these features:
 - Authentication
