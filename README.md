@@ -466,6 +466,9 @@ insert into users (id, username, email, phone, date_of_birth) values ('wolverine
 ### Modular Samples
 ![Modular](https://camo.githubusercontent.com/c17d4dfaab39cf7223f7775c9e973bb936e4169e8bd0011659e83cec755c8f26/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a42526b437272622d5f417637395167737142556b48672e706e67)
 
+#### Architecture with standard features: config, health check, logging, middleware log tracing, data validation
+![Architecture with standard features: config, health check, logging, middleware log tracing, data validation](https://camo.githubusercontent.com/fa1158e7f94bf96e09aef42fcead23366839baf71190133d5df10f3006b2e041/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a6d494e3344556569365676316c755a376747727655412e706e67)
+
 - To build a REST API to support
   - search, get by ID, create, update, delete
   - support "patch" method, using [core-go/service](https://github.com/core-go/service)
@@ -527,6 +530,44 @@ User and role management, with these features:
   - [health check](https://github.com/core-go/health): to check health of SQL 
   - [logging](https://github.com/core-go/log): can use [logrus](https://github.com/sirupsen/logrus) or [zap](https://github.com/uber-go/zap) to log, support to switch between [logrus](https://github.com/sirupsen/logrus) or [zap](https://github.com/uber-go/zap)
   - log tracing by at the [middleware](https://github.com/core-go/log/tree/main/middleware) the http request and http response
+
+## Low code
+### Components
+![Components](https://camo.githubusercontent.com/c95340f3089dc8535b668c08bfa32086d3d7b64998f687284357fd27028eca95/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a476f314777666d704274566441556e747252327179512e706e67)
+#### Commandline
+##### export
+- input: database, project settings
+- output: metadata
+##### generate
+- input: metadata, project templates
+- output: project (working application)
+#### GUI
+##### generator
+- GUI, include "export" and "generate"
+
+### Business View
+![Business View](https://camo.githubusercontent.com/8a7981234d8731878d566e6da0cd02804b93f4e9cd23c7e1ef33a810c5f66cee/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a68317942526c435750554d417653355a77356b3461672e706e67)
+#### Download
+- https://github.com/lowcode-tech/windows
+- https://github.com/lowcode-tech/mac
+- https://github.com/lowcode-tech/linux
+#### Output Samples
+https://github.com/source-code-template
+##### GO Layer Architecture Sample
+- https://github.com/source-code-template/mongo-layer-architecture-sample
+- https://github.com/source-code-template/go-sql-layer-architecture-sample
+##### GO Modular Sample
+- https://github.com/source-code-template/go-mongo-modular-sample
+- https://github.com/source-code-template/go-sql-rest-api
+##### nodejs Layer Architecture Sample
+- https://github.com/source-code-template/mongo-layer-architecture-sample
+- https://github.com/source-code-template/sql-layer-architecture-sample
+##### nodejs Modular Sample
+- https://github.com/source-code-template/mongo-layer-architecture-sample
+- https://github.com/source-code-template/sql-layer-architecture-sample
+##### nodejs Simple Modular Sample
+- https://github.com/source-code-template/mongo-simple-modular-sample
+- https://github.com/source-code-template/sql-simple-modular-sample
 
 ## Tutorials
 ### SQL
