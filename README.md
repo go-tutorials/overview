@@ -558,7 +558,7 @@ https://github.com/source-code-template
 - https://github.com/source-code-template/go-sql-layer-architecture-sample
 ##### GO Modular Sample
 - https://github.com/source-code-template/go-mongo-modular-sample
-- https://github.com/source-code-template/go-sql-rest-api
+- https://github.com/source-code-template/go-sql-modular-sample
 ##### nodejs Layer Architecture Sample
 - https://github.com/source-code-template/mongo-layer-architecture-sample
 - https://github.com/source-code-template/sql-layer-architecture-sample
