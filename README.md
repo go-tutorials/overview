@@ -440,9 +440,11 @@ insert into users (id, username, email, phone, date_of_birth) values ('wolverine
 ## Real project samples
 ### Layer Architecture Samples
 #### Layer Architecture
-![Layer Architecture](https://camo.githubusercontent.com/d9b21eb50ef70dcaebf5a874559608f475e22c799bc66fcf99fb01f08576540f/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a4a4459546c4b3030796730496c556a5a392d737037512e706e67)
-#### Layer Architecture with standard features: config, health check, logging, middleware log tracing, data validation
-![Layer Architecture with standard features: config, health check, logging, middleware log tracing, data validation](https://camo.githubusercontent.com/903f9ae0aff009111bedd6e86351f66e237eb303d279c8bab551ddb6ba52debd/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a38556a4a53765f74573078424b46584b5a7538364d412e706e67)
+![Layer Architecture](https://cdn-images-1.medium.com/max/800/1*JDYTlK00yg0IlUjZ9-sp7Q.png)
+
+Layer Architecture with standard features: config, health check, logging, middleware log tracing, data validation
+
+![Layer Architecture with standard features: config, health check, logging, middleware log tracing, data validation](https://cdn-images-1.medium.com/max/800/1*8UjJSv_tW0xBKFXKZu86MA.png)
 
 - To build a REST API to support
   - search, get by ID, create, update, delete
@@ -464,10 +466,11 @@ insert into users (id, username, email, phone, date_of_birth) values ('wolverine
 - At mongo layer, support "patch", using [core-go/mongo](https://github.com/core-go/mongo)
 
 ### Modular Samples
-![Modular](https://camo.githubusercontent.com/c17d4dfaab39cf7223f7775c9e973bb936e4169e8bd0011659e83cec755c8f26/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a42526b437272622d5f417637395167737142556b48672e706e67)
+![Modular](https://cdn-images-1.medium.com/max/800/1*BRkCrrb-_Av79QgsqBUkHg.png)
 
-#### Architecture with standard features: config, health check, logging, middleware log tracing, data validation
-![Architecture with standard features: config, health check, logging, middleware log tracing, data validation](https://camo.githubusercontent.com/fa1158e7f94bf96e09aef42fcead23366839baf71190133d5df10f3006b2e041/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a6d494e3344556569365676316c755a376747727655412e706e67)
+Architecture with standard features: config, health check, logging, middleware log tracing, data validation
+
+![Architecture with standard features: config, health check, logging, middleware log tracing, data validation](https://cdn-images-1.medium.com/max/800/1*mIN3DUei6Vv1luZ7gGrvUA.png)
 
 - To build a REST API to support
   - search, get by ID, create, update, delete
@@ -488,9 +491,8 @@ insert into users (id, username, email, phone, date_of_birth) values ('wolverine
 - At mongo layer, support "patch", using [core-go/mongo](https://github.com/core-go/mongo)
 
 ### Message Queue Samples
-#### [go-subscription](https://github.com/project-samples/go-subscription)
 ##### Flow to consume a message from a queue
-![Flow to consume a message](https://camo.githubusercontent.com/782bbf69a516401c3918b7e920d8fc25521112d8b04e890f2455768551f6d64e/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a593451554e36516e666d4a67614b6967634e486251412e706e67)
+![Flow to consume a message](https://cdn-images-1.medium.com/max/800/1*Y4QUN6QnfmJgaKigcNHbQA.png)
 - Consume a message from queue, then write the message to database (SQL, Mongo, Casandra, Dynamodb, Firestore, Elasticsearch)
 - Use [core-go/mq](https://github.com/core-go/mq)
 - Support these message queues:
@@ -512,9 +514,9 @@ insert into users (id, username, email, phone, date_of_birth) values ('wolverine
 #### [go-batch-subscription](https://github.com/project-samples/go-batch-subscription)
 - Consume a message from queue one by one
 - After the configured interval time (for example, 5 seconds) or reach the batch size (for example, reach 1000 messages), write all messages (1000 messages) to database (SQL, Mongo, Casandra, Dynamodb, Firestore, Elasticsearch)
-#### [go-admin](https://github.com/project-samples/go-admin)
+#### [go-backoffice](https://github.com/project-samples/go-backoffice)
 ##### Architecture
-![User Role Service](https://camo.githubusercontent.com/f1a6b2ab439fc638303e2268bf2068c2def79ddefa5c53564c846cfee46ac63a/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a562d466e76434966546641344a715a6d596856476a512e706e67)
+![User Role Service](https://cdn-images-1.medium.com/max/800/1*mIN3DUei6Vv1luZ7gGrvUA.png)
 
 User and role management, with these features:
 - Authentication
@@ -533,7 +535,7 @@ User and role management, with these features:
 
 ## Low code
 ### Components
-![Components](https://camo.githubusercontent.com/c95340f3089dc8535b668c08bfa32086d3d7b64998f687284357fd27028eca95/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a476f314777666d704274566441556e747252327179512e706e67)
+![Components](https://cdn-images-1.medium.com/max/800/1*Go1GwfmpBtVdAUntrR2qyQ.png)
 #### Commandline
 ##### export
 - input: database, project settings
@@ -546,7 +548,7 @@ User and role management, with these features:
 - GUI, include "export" and "generate"
 
 ### Business View
-![Business View](https://camo.githubusercontent.com/8a7981234d8731878d566e6da0cd02804b93f4e9cd23c7e1ef33a810c5f66cee/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a68317942526c435750554d417653355a77356b3461672e706e67)
+![Business View](https://cdn-images-1.medium.com/max/800/1*h1yBRlCWPUMAvS5Zw5k4ag.png)
 #### Download
 - https://github.com/lowcode-tech/windows
 - https://github.com/lowcode-tech/mac
@@ -554,11 +556,8 @@ User and role management, with these features:
 #### Output Samples
 https://github.com/source-code-template
 ##### GO Layer Architecture Sample
-- https://github.com/source-code-template/mongo-layer-architecture-sample
-- https://github.com/source-code-template/go-sql-layer-architecture-sample
-##### GO Modular Sample
-- https://github.com/source-code-template/go-mongo-modular-sample
-- https://github.com/source-code-template/go-sql-modular-sample
+- https://github.com/source-code-template/go-sql-sample
+- https://github.com/source-code-template/go-mongo-sample
 ##### nodejs Layer Architecture Sample
 - https://github.com/source-code-template/mongo-layer-architecture-sample
 - https://github.com/source-code-template/sql-layer-architecture-sample
@@ -587,9 +586,9 @@ https://github.com/source-code-template
 - [go-gin-sql-tutorial](https://github.com/go-tutorials/go-gin-sql-tutorial)
 
 ## Layer Architecture Samples
-- [go-mongo-layer-architecture-sample](https://github.com/go-tutorials/go-mongo-layer-architecture-sample)
-- [go-sql-layer-architecture-sample](https://github.com/go-tutorials/go-sql-layer-architecture-sample)
-- [gorm-layer-architecture-sample](https://github.com/go-tutorials/gorm-layer-architecture-sample)
+- [go-sql-sample](https://github.com/go-tutorials/go-sql-sample)
+- [go-mongo-sample](https://github.com/go-tutorials/go-mongo-sample)
+- [gorm-sample](https://github.com/go-tutorials/gorm-sample)
 
 ## Modular Samples
 - [go-mongo-modular-sample](https://github.com/go-tutorials/go-mongo-modular-sample)
